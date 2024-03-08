@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { HashRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '@/context/AuthContext';
 import { route } from '@/routes';
 import PrivateRoute from '@/utils/PrivateRoute.jsx';
@@ -66,8 +66,8 @@ import NotFound from '@/views/NotFound.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
-    {/* <HashRouter> */}
+    <HashRouter>
+    {/* <BrowserRouter> */}
       <AuthProvider>
         <Routes>
           {/* Public routes */}
@@ -137,8 +137,8 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </AuthProvider>
-    {/* </HashRouter> */}
-    </BrowserRouter>
+{/*     </BrowserRouter> */}
+    </HashRouter>
   )
 }
 
