@@ -66,8 +66,7 @@ import NotFound from '@/views/NotFound.jsx';
 
 function App() {
   return (
-    <HashRouter>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
       <AuthProvider>
         <Routes>
           {/* Public routes */}
@@ -137,8 +136,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </AuthProvider>
-{/*     </BrowserRouter> */}
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
